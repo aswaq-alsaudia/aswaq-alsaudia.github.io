@@ -84,9 +84,27 @@ footer{
   background:var(--green-dark);
   color:#fff;
   text-align:center;
-  padding:20px 15px;
+  padding:12px 15px;
   font-size:.95rem;
   z-index:997;
+}
+
+.footer-nav{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:6px;
+}
+
+.footer-nav a{
+  color:#fff;
+  font-weight:bold;
+}
+
+.footer-copy{
+  font-size:.9rem;
+  opacity:.9;
 }
 
 .whatsapp{
