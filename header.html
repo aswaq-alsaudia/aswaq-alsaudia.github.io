@@ -1,16 +1,17 @@
-<div id="header"></div>
+<header>
+  <div class="logo">السوق السعودي</div>
+  <nav>
+    <a href="/index.html">الرئيسية</a>
+    <a href="/pages/من نحن.html">من نحن</a>
+    <a href="/index.html#features">مميزاتنا</a>
+  </nav>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <div></div><div></div><div></div>
+  </div>
+</header>
 
-<script>
-fetch('../header.html')
-  .then(response => response.text())
-  .then(data => document.getElementById('header').innerHTML = data);
-</script>
-
-<!-- محتوى الصفحة -->
-
-<div id="footer"></div>
-<script>
-fetch('../footer.html')
-  .then(response => response.text())
-  .then(data => document.getElementById('footer').innerHTML = data);
-</script>
+<div class="mobile-nav" id="mobileNav">
+  <a href="/index.html">الرئيسية</a>
+  <a href="/pages/من نحن.html">من نحن</a>
+  <a href="/index.html#features">مميزاتنا</a>
+</div>
