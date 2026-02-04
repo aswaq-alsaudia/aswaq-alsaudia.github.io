@@ -1,0 +1,33 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main  # أو الفرع الذي تستخدمه
+
+jobs:
+  build-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install sitemap generator
+        run: npm install -g sitemap-generator-cli
+
+      - name: Generate Sitemap
+        run: |
+          sitemap-generator https://aswaq-alsaudia.github.io --filepath ./sitemap.xml --changefreq weekly --priority 0.8
+          
+      - name: Commit and Push sitemap
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap.xml"
+          git push
