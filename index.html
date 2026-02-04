@@ -3,131 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>السوق السعودي | منصة خدمات ودليل المتاجر الإلكترونية السعودية</title>
 
   <!-- SEO -->
   <meta name="description" content="السوق السعودي منصة خدمات سعودية 100% تعمل كدليل احترافي للمتاجر الإلكترونية داخل المملكة العربية السعودية وتدعم التجارة الرقمية ورؤية 2030." />
   <meta name="keywords" content="السوق السعودي, منصة خدمات سعودية, دليل المتاجر الإلكترونية, التجارة الإلكترونية السعودية" />
   <meta name="author" content="السوق السعودي" />
-  <link rel="canonical" href="https://aswaq-alsaudia.github.io/" />
-  <meta name="robots" content="index, follow" />
 
-  <!-- Global Tracking / Verification -->
-  <script>
-    fetch('head-tracking.html')
-      .then(r => r.text())
-      .then(d => document.head.insertAdjacentHTML('beforeend', d))
-      .catch(e => console.warn('Tracking not loaded', e));
-  </script>
-
-  <!-- Structured Data | Saudi Service Platform (Rich Results Ready) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-
-      {
-        "@type": "WebSite",
-        "@id": "https://aswaq-alsaudia.github.io/#website",
-        "url": "https://aswaq-alsaudia.github.io/",
-        "name": "السوق السعودي",
-        "alternateName": "Saudi Market Services",
-        "inLanguage": "ar-SA",
-        "description": "منصة خدمات سعودية رقمية تعمل كدليل موثوق للمتاجر الإلكترونية داخل المملكة",
-        "publisher": {
-          "@id": "https://aswaq-alsaudia.github.io/#organization"
-        }
-      },
-
-      {
-        "@type": "Organization",
-        "@id": "https://aswaq-alsaudia.github.io/#organization",
-        "name": "السوق السعودي",
-        "url": "https://aswaq-alsaudia.github.io/",
-        "logo": "https://aswaq-alsaudia.github.io/images/بانر%20السوق%20السعودي.jpg",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Saudi Arabia"
-        },
-        "sameAs": [
-          "https://wa.me/201110760081"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "telephone": "+201110760081",
-          "availableLanguage": "Arabic"
-        }
-      },
-
-      {
-        "@type": "Service",
-        "@id": "https://aswaq-alsaudia.github.io/#service",
-        "name": "خدمات دليل المتاجر الإلكترونية السعودية",
-        "serviceType": "Electronic Commerce Directory",
-        "provider": {
-          "@id": "https://aswaq-alsaudia.github.io/#organization"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Saudi Arabia"
-        },
-        "description": "خدمة سعودية رقمية لربط المستهلك بالمتاجر الإلكترونية المحلية الموثوقة داخل المملكة",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "SAR",
-          "availability": "https://schema.org/InStock"
-        }
-      },
-
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://aswaq-alsaudia.github.io/#localbusiness",
-        "name": "السوق السعودي",
-        "image": "https://aswaq-alsaudia.github.io/images/بانر%20السوق%20السعودي.jpg",
-        "telephone": "+201110760081",
-        "priceRange": "SAR",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "SA"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Saudi Arabia"
-        }
-      },
-
-      {
-        "@type": "CollectionPage",
-        "@id": "https://aswaq-alsaudia.github.io/#directory",
-        "name": "دليل المتاجر الإلكترونية السعودية",
-        "description": "منصة خدمات سعودية لعرض وتصنيف المتاجر الإلكترونية العاملة داخل المملكة",
-        "isPartOf": {
-          "@id": "https://aswaq-alsaudia.github.io/#website"
-        }
-      }
-
-    ]
-  }
-  </script>
-
-  <!-- Styles | Mobile First -->
+  <!-- Styles -->
   <style>
     :root {
       --green-main:#166534;
       --green-dark:#064e3b;
       --green-soft:#dcfce7;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0;
       font-family:Tahoma,Arial,sans-serif;
       background:#f9fafb;
       color:#1f2937;
-      line-height:1.9
+      line-height:1.9;
+      padding-top:70px; /* space for fixed header */
+      padding-bottom:80px; /* space for fixed footer */
     }
+
+    a{text-decoration:none;color:inherit}
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      background:var(--green-dark);
+      color:#fff;
+      z-index:999;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    }
+    header .logo{
+      font-weight:bold;
+      font-size:1.2rem;
+    }
+    nav{
+      display:flex;
+      gap:20px;
+    }
+    nav a{
+      color:#fff;
+      font-weight:bold;
+    }
+
+    /* Hamburger for mobile */
+    .hamburger{
+      display:none;
+      flex-direction:column;
+      cursor:pointer;
+      gap:5px;
+    }
+    .hamburger div{
+      width:25px;
+      height:3px;
+      background:#fff;
+    }
+
+    /* Mobile nav overlay */
+    .mobile-nav{
+      display:none;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+      color:#fff;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:30px;
+      font-size:1.3rem;
+      z-index:998;
+    }
+
+    .mobile-nav a{color:#fff;}
 
     /* HERO */
     .hero{
@@ -139,13 +100,13 @@
       justify-content:center;
       text-align:center;
       padding:20px;
-      color:#fff
+      color:#fff;
     }
     .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(rgba(6,78,59,.65),rgba(6,78,59,.8))
+      background:linear-gradient(rgba(6,78,59,.65),rgba(6,78,59,.8));
     }
     .hero-content{position:relative;z-index:1;max-width:760px}
     .hero h1{font-size:2.2rem;margin-bottom:15px}
@@ -155,9 +116,8 @@
       color:#fff;
       padding:14px 34px;
       border-radius:999px;
-      text-decoration:none;
       font-weight:bold;
-      display:inline-block
+      display:inline-block;
     }
 
     section{max-width:1100px;margin:auto;padding:55px 20px}
@@ -169,14 +129,14 @@
       padding:26px;
       border-radius:18px;
       box-shadow:0 10px 25px rgba(0,0,0,.06);
-      text-align:center
+      text-align:center;
     }
 
     .cta{
       background:var(--green-soft);
       border-radius:22px;
       text-align:center;
-      padding:40px 22px
+      padding:40px 22px;
     }
     .cta a{
       display:inline-block;
@@ -185,21 +145,25 @@
       color:#fff;
       padding:14px 30px;
       border-radius:999px;
-      text-decoration:none;
-      font-weight:bold
+      font-weight:bold;
     }
 
     footer{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
       background:var(--green-dark);
       color:#fff;
       text-align:center;
-      padding:30px 15px;
-      font-size:.95rem
+      padding:20px 15px;
+      font-size:.95rem;
+      z-index:997;
     }
 
     .whatsapp{
       position:fixed;
-      bottom:20px;
+      bottom:90px;
       left:20px;
       width:60px;
       height:60px;
@@ -212,18 +176,43 @@
       color:#fff;
       text-decoration:none;
       box-shadow:0 8px 20px rgba(0,0,0,.3);
-      z-index:999
+      z-index:999;
     }
 
     @media(min-width:768px){
       .hero h1{font-size:3.2rem}
       .hero p{font-size:1.3rem}
       .grid{grid-template-columns:repeat(3,1fr)}
+      .hamburger{display:none}
+      .mobile-nav{display:none !important}
+      nav{display:flex}
+    }
+
+    @media(max-width:767px){
+      nav{display:none}
+      .hamburger{display:flex}
     }
   </style>
 </head>
-
 <body>
+
+<header>
+  <div class="logo">السوق السعودي</div>
+  <nav>
+    <a href="#about">من نحن</a>
+    <a href="#features">مميزاتنا</a>
+    <a href="#cta">انضم الآن</a>
+  </nav>
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <div></div><div></div><div></div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="toggleMobileNav()">من نحن</a>
+  <a href="#features" onclick="toggleMobileNav()">مميزاتنا</a>
+  <a href="#cta" onclick="toggleMobileNav()">انضم الآن</a>
+</div>
 
 <section class="hero">
   <div class="hero-content">
@@ -235,7 +224,7 @@
   </div>
 </section>
 
-<section>
+<section id="about">
   <h2>من نحن</h2>
   <p>
     <strong>السوق السعودي</strong> منصة خدمات سعودية 100% تهدف إلى دعم التجارة
@@ -244,7 +233,7 @@
   </p>
 </section>
 
-<section>
+<section id="features">
   <h2>مميزات السوق السعودي</h2>
   <div class="grid">
     <div class="box">منصة خدمات سعودية موثوقة</div>
@@ -253,7 +242,7 @@
   </div>
 </section>
 
-<section class="cta">
+<section class="cta" id="cta">
   <h2>هل لديك متجر إلكتروني سعودي؟</h2>
   <p>انضم إلى منصة خدمات السوق السعودي ووسّع حضورك الرقمي</p>
   <a href="https://wa.me/201110760081" target="_blank" rel="noopener">
@@ -266,6 +255,13 @@
 </footer>
 
 <a class="whatsapp" href="https://wa.me/201110760081" target="_blank" aria-label="واتساب">💬</a>
+
+<script>
+  function toggleMobileNav(){
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
 
 </body>
 </html>
