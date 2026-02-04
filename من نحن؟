@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن - أسواق السعودية</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://aswaq-alsaudia.github.io/images/%D8%A8%D8%A7%D9%86%D8%B1%20%D8%A7%D9%84%D8%B3%D9%88%D9%82%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A.jpg') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .container h2 {
+      color: #0077cc;
+      margin-top: 0;
+    }
+
+    .container p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>من نحن</h1>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>أهلاً بكم في أسواق السعودية</h2>
+    <p>
+      أسواق السعودية هو موقع متخصص في تقديم أفضل المنتجات والخدمات للمستهلكين في المملكة العربية السعودية.
+      نحن نهدف إلى تقديم تجربة تسوق سهلة، آمنة وموثوقة لجميع عملائنا، مع ضمان جودة المنتجات وتنوعها.
+    </p>
+    <p>
+      منذ تأسيسنا، حرصنا على بناء مجتمع رقمي يمكن للمستخدمين من خلاله الوصول إلى كل ما يحتاجونه بسهولة،
+      مع الالتزام بأعلى معايير الخدمة والدقة في المعلومات.
+    </p>
+    <p>
+      فريقنا يتكون من مجموعة من المحترفين الذين يسعون دائمًا لتقديم محتوى مفيد وخدمات مبتكرة،
+      مما يجعل تجربة التسوق عبر موقعنا ممتعة وموثوقة.
+    </p>
+  </div>
+
+</body>
+</html>
