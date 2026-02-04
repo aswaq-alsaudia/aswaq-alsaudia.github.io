@@ -1,23 +1,38 @@
 User-agent: *
-Disallow:
+Allow: /
 
-# AI Crawlers
+# Explicit AI Crawlers (allowed)
 User-agent: GPTBot
-Disallow:
+Allow: /
 
 User-agent: ChatGPT-User
-Disallow:
+Allow: /
 
 User-agent: CCBot
-Disallow:
+Allow: /
 
 User-agent: ClaudeBot
-Disallow:
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
 
 User-agent: Google-Extended
-Disallow:
+Allow: /
 
 User-agent: PerplexityBot
-Disallow:
+Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+Sitemap: https://aswaq-alsaudia.github.io/sitemap.xml
