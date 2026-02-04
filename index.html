@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>السوق السعودي | دليل المتاجر الإلكترونية السعودية</title>
+<script>
+  fetch('head-tracking.html')
+    .then(response => response.text())
+    .then(data => {
+      document.head.insertAdjacentHTML('beforeend', data);
+    });
+</script>
 
   <!-- SEO -->
   <meta name="description" content="السوق السعودي منصة سعودية 100% تعمل كدليل احترافي للمتاجر الإلكترونية داخل المملكة العربية السعودية، وتدعم التجارة الرقمية ورؤية السعودية 2030." />
