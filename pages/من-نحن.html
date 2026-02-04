@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/main.css" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="preload" as="image" href="https://aswaq-alsaudia.github.io/images/%D8%A8%D8%A7%D9%86%D8%B1%20%D8%A7%D9%84%D8%B3%D9%88%D9%82%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A.jpg" />
+  <link rel="preload" as="image" href="https://aswaq-alsaudia.github.io/images/og-image.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -18,15 +18,15 @@
   <meta property="og:title" content="من نحن - أسواق السعودية" />
   <meta property="og:description" content="تعرف على أسواق السعودية: منصّة سعودية تهدف لتقديم تجربة تسوق رقمية موثوقة ودعم المتاجر والخدمات داخل المملكة." />
   <meta property="og:url" content="https://aswaq-alsaudia.github.io/pages/%D9%85%D9%86-%D9%86%D8%AD%D9%86.html" />
-  <meta property="og:image" content="https://aswaq-alsaudia.github.io/images/%D8%A8%D8%A7%D9%86%D8%B1%20%D8%A7%D9%84%D8%B3%D9%88%D9%82%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A.jpg" />
-  <meta property="og:image:alt" content="بانر أسواق السعودية" />
+  <meta property="og:image" content="https://aswaq-alsaudia.github.io/images/og-image.svg" />
+  <meta property="og:image:alt" content="أسواق السعودية" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="من نحن - أسواق السعودية" />
   <meta name="twitter:description" content="تعرف على أسواق السعودية: منصّة سعودية تهدف لتقديم تجربة تسوق رقمية موثوقة ودعم المتاجر والخدمات داخل المملكة." />
-  <meta name="twitter:image" content="https://aswaq-alsaudia.github.io/images/%D8%A8%D8%A7%D9%86%D8%B1%20%D8%A7%D9%84%D8%B3%D9%88%D9%82%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A.jpg" />
-  <meta name="twitter:image:alt" content="بانر أسواق السعودية" />
+  <meta name="twitter:image" content="https://aswaq-alsaudia.github.io/images/og-image.svg" />
+  <meta name="twitter:image:alt" content="أسواق السعودية" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -48,9 +48,28 @@
       }
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://aswaq-alsaudia.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "من نحن",
+          "item": "https://aswaq-alsaudia.github.io/pages/%D9%85%D9%86-%D9%86%D8%AD%D9%86.html"
+        }
+      ]
+    }
+  </script>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.8;
       color: #333;
       background-color: #f9f9f9;
@@ -104,12 +123,12 @@
   <div id="site-header"></div>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero reveal">
     <h1>من نحن</h1>
   </section>
 
   <!-- Main Content -->
-  <div class="container">
+  <div class="container reveal">
     <h2>أهلًا بكم في أسواق السعودية</h2>
     <p>
       أسواق السعودية هو موقع متخصص في تقديم أفضل المنتجات والخدمات للمستهلكين في المملكة العربية السعودية.
