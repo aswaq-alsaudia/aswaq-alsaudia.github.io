@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml"
-  xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
->
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- الصفحة الرئيسية -->
   <url>
@@ -13,21 +9,34 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- صفحات أساسية حالية / مستقبلية -->
+  <!-- صفحة من نحن -->
+  <url>
+    <loc>https://aswaq-alsaudia.github.io/about.html</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحة الخدمات -->
   <url>
     <loc>https://aswaq-alsaudia.github.io/services.html</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- صفحة تسجيل متجر -->
   <url>
     <loc>https://aswaq-alsaudia.github.io/register.html</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- صفحة المتاجر -->
   <url>
     <loc>https://aswaq-alsaudia.github.io/stores/</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,21 +44,16 @@
   <!-- صفحات قانونية -->
   <url>
     <loc>https://aswaq-alsaudia.github.io/privacy.html</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://aswaq-alsaudia.github.io/terms.html</loc>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-
-  <!-- صور مهمة (Hero / Branding) -->
-  <url>
-    <loc>https://aswaq-alsaudia.github.io/images/بانر%20السوق%20السعودي.jpg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 
 </urlset>
