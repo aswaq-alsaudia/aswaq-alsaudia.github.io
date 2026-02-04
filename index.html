@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>السوق السعودي | دليل المتاجر الإلكترونية السعودية</title>
 
-  <!-- SEO الأساسي -->
-  <meta name="description" content="السوق السعودي منصة سعودية 100% تعمل كدليل احترافي للمتاجر الإلكترونية داخل المملكة العربية السعودية، لدعم التجارة الرقمية ورؤية 2030." />
-  <meta name="keywords" content="السوق السعودي, متاجر إلكترونية سعودية, تجارة إلكترونية السعودية, دليل المتاجر" />
+  <!-- SEO -->
+  <meta name="description" content="السوق السعودي منصة سعودية 100% تعمل كدليل احترافي للمتاجر الإلكترونية داخل المملكة العربية السعودية، وتدعم التجارة الرقمية ورؤية السعودية 2030." />
+  <meta name="keywords" content="السوق السعودي, متاجر إلكترونية سعودية, دليل المتاجر السعودية, التجارة الإلكترونية في السعودية" />
   <meta name="author" content="السوق السعودي" />
   <link rel="canonical" href="https://aswaq-alsaudia.github.io/" />
 
   <!-- Robots -->
   <meta name="robots" content="index, follow" />
 
-  <!-- Structured Data (احترافي + سعودي) -->
+  <!-- Structured Data (Advanced Saudi Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,102 +24,84 @@
         "@id": "https://aswaq-alsaudia.github.io/#website",
         "url": "https://aswaq-alsaudia.github.io/",
         "name": "السوق السعودي",
-        "description": "دليل المتاجر الإلكترونية السعودية",
         "inLanguage": "ar-SA",
-        "publisher": {
-          "@id": "https://aswaq-alsaudia.github.io/#organization"
-        }
+        "description": "دليل وطني للمتاجر الإلكترونية السعودية",
+        "publisher": { "@id": "https://aswaq-alsaudia.github.io/#organization" }
       },
       {
         "@type": "Organization",
         "@id": "https://aswaq-alsaudia.github.io/#organization",
         "name": "السوق السعودي",
         "url": "https://aswaq-alsaudia.github.io/",
-        "logo": "https://aswaq-alsaudia.github.io/banner.jpg",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Saudi Arabia"
-        }
+        "logo": "https://aswaq-alsaudia.github.io/assets/saudi-market-logo.png",
+        "areaServed": { "@type": "Country", "name": "Saudi Arabia" }
       },
       {
         "@type": "CollectionPage",
         "name": "دليل المتاجر الإلكترونية السعودية",
-        "about": "متاجر إلكترونية داخل المملكة العربية السعودية",
-        "isPartOf": {
-          "@id": "https://aswaq-alsaudia.github.io/#website"
-        }
+        "about": "متاجر إلكترونية تعمل داخل المملكة العربية السعودية",
+        "isPartOf": { "@id": "https://aswaq-alsaudia.github.io/#website" }
       }
     ]
   }
   </script>
 
-  <!-- Mobile First CSS -->
+  <!-- Mobile First Styles -->
   <style>
     :root {
-      --green: #166534;
+      --green-main: #166534;
       --green-dark: #064e3b;
-      --green-light: #dcfce7;
+      --green-soft: #dcfce7;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Tajawal", Tahoma, Arial, sans-serif;
+      font-family: 'Tajawal', Tahoma, Arial, sans-serif;
       background: #f9fafb;
       color: #1f2937;
       line-height: 1.9;
     }
 
-    /* HERO */
+    /* HERO SECTION */
     .hero {
-      position: relative;
-      background: url('banner.jpg') center/cover no-repeat;
-      min-height: 85vh;
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(6,78,59,0.75), rgba(6,78,59,0.75)),
+        url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: #fff;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-    }
-    .hero-content {
-      position: relative;
       padding: 20px;
-      max-width: 900px;
     }
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 15px;
     }
     .hero p {
       font-size: 1.1rem;
-      margin-bottom: 25px;
+      max-width: 700px;
+      margin: 0 auto 25px;
     }
     .hero a {
-      display: inline-block;
-      background: var(--green);
+      background: #22c55e;
       color: #fff;
-      padding: 14px 32px;
+      padding: 14px 34px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     section {
-      padding: 50px 18px;
       max-width: 1100px;
       margin: auto;
+      padding: 55px 20px;
     }
-    h2 {
-      color: var(--green-dark);
-      margin-bottom: 18px;
-    }
+    h2 { color: var(--green-dark); }
 
     .grid {
       display: grid;
@@ -130,18 +112,19 @@
       padding: 26px;
       border-radius: 18px;
       box-shadow: 0 10px 25px rgba(0,0,0,.06);
+      text-align: center;
     }
 
     .cta {
-      background: var(--green-light);
+      background: var(--green-soft);
       border-radius: 22px;
-      padding: 35px 22px;
       text-align: center;
+      padding: 40px 22px;
     }
     .cta a {
       margin-top: 15px;
       display: inline-block;
-      background: var(--green);
+      background: var(--green-main);
       color: #fff;
       padding: 14px 30px;
       border-radius: 999px;
@@ -153,11 +136,11 @@
       background: var(--green-dark);
       color: #fff;
       text-align: center;
-      padding: 28px 15px;
+      padding: 30px 15px;
       font-size: .95rem;
     }
 
-    /* WhatsApp */
+    /* WhatsApp Floating */
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -176,42 +159,41 @@
       z-index: 999;
     }
 
-    /* Desktop Enhancements */
+    /* Desktop */
     @media (min-width: 768px) {
-      .hero h1 { font-size: 3rem; }
-      .hero p { font-size: 1.25rem; }
+      .hero h1 { font-size: 3.2rem; }
+      .hero p { font-size: 1.3rem; }
       .grid { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div>
     <h1>السوق السعودي</h1>
-    <p>دليلك الموثوق لاكتشاف أفضل المتاجر الإلكترونية السعودية في مكان واحد</p>
+    <p>المنصة الوطنية لاكتشاف ودعم المتاجر الإلكترونية السعودية في مكان واحد</p>
     <a href="https://wa.me/201110760081" target="_blank">سجّل متجرك الآن</a>
   </div>
 </section>
 
 <section>
   <h2>من نحن</h2>
-  <p><strong>السوق السعودي</strong> منصة وطنية رقمية تجمع المتاجر الإلكترونية التي تعمل داخل المملكة العربية السعودية، وتهدف إلى دعم المشاريع المحلية وتعزيز الثقة في التجارة الإلكترونية بما يتماشى مع رؤية السعودية 2030.</p>
+  <p><strong>السوق السعودي</strong> هو دليل رقمي سعودي 100% يهدف إلى دعم التجارة الإلكترونية المحلية وربط المستهلك بالمتاجر التي تقدم خدمات داخل المملكة، بما يتوافق مع رؤية السعودية 2030.</p>
 </section>
 
 <section>
-  <h2>لماذا السوق السعودي؟</h2>
+  <h2>مميزات السوق السعودي</h2>
   <div class="grid">
-    <div class="box">هوية سعودية خالصة تخدم السوق المحلي</div>
-    <div class="box">دعم مباشر للتجارة الإلكترونية الوطنية</div>
-    <div class="box">متاجر موثوقة وشحن وخدمة داخل السعودية</div>
+    <div class="box">هوية سعودية خالصة</div>
+    <div class="box">دعم المشاريع والمتاجر المحلية</div>
+    <div class="box">متاجر موثوقة داخل المملكة</div>
   </div>
 </section>
 
 <section class="cta">
   <h2>هل لديك متجر إلكتروني سعودي؟</h2>
-  <p>انضم إلى السوق السعودي وكن جزءًا من الدليل الوطني للتجارة الإلكترونية</p>
+  <p>انضم الآن إلى السوق السعودي ووسّع نطاق وصولك لعملائك</p>
   <a href="https://wa.me/201110760081" target="_blank">تواصل عبر واتساب</a>
 </section>
 
