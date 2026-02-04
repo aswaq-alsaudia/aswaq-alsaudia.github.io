@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>السوق السعودي | دليل المتاجر الإلكترونية السعودية</title>
-<script>
-  fetch('head-tracking.html')
-    .then(response => response.text())
-    .then(data => {
-      document.head.insertAdjacentHTML('beforeend', data);
-    });
-</script>
 
   <!-- SEO -->
   <meta name="description" content="السوق السعودي منصة سعودية 100% تعمل كدليل احترافي للمتاجر الإلكترونية داخل المملكة العربية السعودية، وتدعم التجارة الرقمية ورؤية السعودية 2030." />
   <meta name="keywords" content="السوق السعودي, متاجر إلكترونية سعودية, دليل المتاجر السعودية, التجارة الإلكترونية في السعودية" />
   <meta name="author" content="السوق السعودي" />
   <link rel="canonical" href="https://aswaq-alsaudia.github.io/" />
-
-  <!-- Robots -->
   <meta name="robots" content="index, follow" />
 
-  <!-- Structured Data (Advanced Saudi Schema) -->
+  <!-- Global Tracking / Verification (Loaded Once) -->
+  <script>
+    fetch('head-tracking.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.warn('Tracking file not loaded', err));
+  </script>
+
+  <!-- Structured Data (Saudi Optimized) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,8 +42,10 @@
         "@id": "https://aswaq-alsaudia.github.io/#organization",
         "name": "السوق السعودي",
         "url": "https://aswaq-alsaudia.github.io/",
-        "logo": "https://aswaq-alsaudia.github.io/assets/saudi-market-logo.png",
-        "areaServed": { "@type": "Country", "name": "Saudi Arabia" }
+        "areaServed": {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        }
       },
       {
         "@type": "CollectionPage",
@@ -53,54 +57,74 @@
   }
   </script>
 
-  <!-- Mobile First Styles -->
+  <!-- Styles (Mobile First) -->
   <style>
     :root {
       --green-main: #166534;
       --green-dark: #064e3b;
       --green-soft: #dcfce7;
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: 'Tajawal', Tahoma, Arial, sans-serif;
+      font-family: Tahoma, Arial, sans-serif;
       background: #f9fafb;
       color: #1f2937;
       line-height: 1.9;
     }
 
-    /* HERO SECTION */
+    /* ===== HERO ===== */
     .hero {
+      position: relative;
       min-height: 90vh;
-      background:
-        linear-gradient(rgba(6,78,59,0.75), rgba(6,78,59,0.75)),
-        url('https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1600&q=80');
+      background-image: url("https://aswaq-alsaudia.github.io/images/بانر%20السوق%20السعودي.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
       padding: 20px;
+      color: #fff;
     }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        rgba(6, 78, 59, 0.65),
+        rgba(6, 78, 59, 0.75)
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+
     .hero h1 {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       margin-bottom: 15px;
     }
+
     .hero p {
       font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 25px;
+      margin-bottom: 25px;
     }
+
     .hero a {
-      background: #22c55e;
+      background: #25d366;
       color: #fff;
       padding: 14px 34px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
+      display: inline-block;
     }
 
     section {
@@ -108,12 +132,17 @@
       margin: auto;
       padding: 55px 20px;
     }
-    h2 { color: var(--green-dark); }
+
+    h2 {
+      color: var(--green-dark);
+      margin-bottom: 15px;
+    }
 
     .grid {
       display: grid;
       gap: 22px;
     }
+
     .box {
       background: #fff;
       padding: 26px;
@@ -128,9 +157,10 @@
       text-align: center;
       padding: 40px 22px;
     }
+
     .cta a {
-      margin-top: 15px;
       display: inline-block;
+      margin-top: 15px;
       background: var(--green-main);
       color: #fff;
       padding: 14px 30px;
@@ -144,7 +174,7 @@
       color: #fff;
       text-align: center;
       padding: 30px 15px;
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
 
     /* WhatsApp Floating */
@@ -166,7 +196,7 @@
       z-index: 999;
     }
 
-    /* Desktop */
+    /* Desktop Enhancements */
     @media (min-width: 768px) {
       .hero h1 { font-size: 3.2rem; }
       .hero p { font-size: 1.3rem; }
@@ -174,41 +204,52 @@
     }
   </style>
 </head>
+
 <body>
 
-<section class="hero">
-  <div>
-    <h1>السوق السعودي</h1>
-    <p>المنصة الوطنية لاكتشاف ودعم المتاجر الإلكترونية السعودية في مكان واحد</p>
-    <a href="https://wa.me/201110760081" target="_blank">سجّل متجرك الآن</a>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>السوق السعودي</h1>
+      <p>المنصة الوطنية لاكتشاف ودعم المتاجر الإلكترونية السعودية في مكان واحد</p>
+      <a href="https://wa.me/201110760081" target="_blank" rel="noopener">
+        سجّل متجرك الآن
+      </a>
+    </div>
+  </section>
 
-<section>
-  <h2>من نحن</h2>
-  <p><strong>السوق السعودي</strong> هو دليل رقمي سعودي 100% يهدف إلى دعم التجارة الإلكترونية المحلية وربط المستهلك بالمتاجر التي تقدم خدمات داخل المملكة، بما يتوافق مع رؤية السعودية 2030.</p>
-</section>
+  <section>
+    <h2>من نحن</h2>
+    <p>
+      <strong>السوق السعودي</strong> هو دليل رقمي سعودي 100% يهدف إلى دعم التجارة
+      الإلكترونية المحلية وربط المستهلك بالمتاجر التي تقدم خدمات داخل المملكة،
+      بما يتوافق مع رؤية السعودية 2030.
+    </p>
+  </section>
 
-<section>
-  <h2>مميزات السوق السعودي</h2>
-  <div class="grid">
-    <div class="box">هوية سعودية خالصة</div>
-    <div class="box">دعم المشاريع والمتاجر المحلية</div>
-    <div class="box">متاجر موثوقة داخل المملكة</div>
-  </div>
-</section>
+  <section>
+    <h2>مميزات السوق السعودي</h2>
+    <div class="grid">
+      <div class="box">هوية سعودية خالصة</div>
+      <div class="box">دعم المشاريع والمتاجر المحلية</div>
+      <div class="box">متاجر موثوقة داخل المملكة</div>
+    </div>
+  </section>
 
-<section class="cta">
-  <h2>هل لديك متجر إلكتروني سعودي؟</h2>
-  <p>انضم الآن إلى السوق السعودي ووسّع نطاق وصولك لعملائك</p>
-  <a href="https://wa.me/201110760081" target="_blank">تواصل عبر واتساب</a>
-</section>
+  <section class="cta">
+    <h2>هل لديك متجر إلكتروني سعودي؟</h2>
+    <p>انضم الآن إلى السوق السعودي ووسّع نطاق وصولك لعملائك</p>
+    <a href="https://wa.me/201110760081" target="_blank" rel="noopener">
+      تواصل عبر واتساب
+    </a>
+  </section>
 
-<footer>
-  © جميع الحقوق محفوظة — السوق السعودي 🇸🇦
-</footer>
+  <footer>
+    © جميع الحقوق محفوظة — السوق السعودي 🇸🇦
+  </footer>
 
-<a class="whatsapp" href="https://wa.me/201110760081" target="_blank" aria-label="واتساب">💬</a>
+  <a class="whatsapp" href="https://wa.me/201110760081" target="_blank" aria-label="واتساب">
+    💬
+  </a>
 
 </body>
 </html>
